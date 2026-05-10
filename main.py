@@ -375,6 +375,10 @@ def back_button(callback: str):
 # ============================================================
 router = Router()
 
+@router.message(F.text == "тест")
+async def test_emoji(message: Message):
+    await message.answer('<tg-emoji emoji-id="5906975484054345026">.</tg-emoji> проверка премиум эмодзи', parse_mode='HTML')
+    
 @router.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer_sticker(STICKER_WELCOME)
