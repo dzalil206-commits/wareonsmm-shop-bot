@@ -19,14 +19,12 @@ ADMIN_IDS = [5062414502]
 STICKER_WELCOME = "CAACAgIAAxkBAAFJQYRqAAGSijY-HNc8OcmMNQc8kPlFKocAAm5bAAJFJjBJZsail57k1607BA"
 STICKER_THANKS = "CAACAgIAAxkBAAFJQYxqAAGSpzX4vKAlryhAQeag0JN0zwIAAsVQAAIEyjFJrFlaKe6oapY7BA"
 
-PAYMENT_DETAILS = f"5599002124687536"
-{emoji('payment_btn')} <b>РЕКВИЗИТЫ ДЛЯ ОПЛАТЫ</b>
-
-<pre>Банк: Юмани
-Карта: 5599002124687536
-
-После оплаты пришли скриншот прямо сюда
-"""
+PAYMENT_DETAILS = (
+    f"{emoji('payment_btn')} <b>РЕКВИЗИТЫ ДЛЯ ОПЛАТЫ</b>\n\n"
+    "<pre>Банк: Юмани\n"
+    "Карта: 5599002124687536\n"
+    "После оплаты пришли скриншот прямо сюда"
+)
 
 # ============================================================
 # ПРЕМИУМ-ЭМОДЗИ
