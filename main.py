@@ -14,18 +14,16 @@ from aiogram.fsm.storage.memory import MemoryStorage
 # НАСТРОЙКИ (ЗАМЕНИ НА СВОИ)
 # ============================================================
 BOT_TOKEN = "8237040076:AAHEpz01b8zJmjWrM4tmOdQEOZs2QECt2Qw"
-ADMIN_IDS = [5062414502]  # Твой Telegram ID
+ADMIN_IDS = [5062414502]
 
-# Премиум-стикеры (получи file_id через @RawDataBot)
 STICKER_WELCOME = "CAACAgIAAxkBAAFJQYRqAAGSijY-HNc8OcmMNQc8kPlFKocAAm5bAAJFJjBJZsail57k1607BA"
 STICKER_THANKS = "CAACAgIAAxkBAAFJQYxqAAGSpzX4vKAlryhAQeag0JN0zwIAAsVQAAIEyjFJrFlaKe6oapY7BA"
 
-# Реквизиты для оплаты
 PAYMENT_DETAILS = f"5599002124687536"
 {emoji('payment_btn')} <b>РЕКВИЗИТЫ ДЛЯ ОПЛАТЫ</b>
 
 <pre>Банк: Юмани
-Карта: 5536 91XX XXXX XXXX
+Карта: 5599002124687536
 
 После оплаты пришли скриншот прямо сюда
 """
@@ -71,8 +69,8 @@ CUSTOM_EMOJI = {
 def emoji(name: str) -> str:
     eid = CUSTOM_EMOJI.get(name)
     if eid:
-        return f'<tg-emoji emoji-id="{eid}">⚡</tg-emoji>'
-    return "⚡"
+        return f'<tg-emoji emoji-id="{eid}">.</tg-emoji>'
+    return "."
 
 # ============================================================
 # БАЗА ДАННЫХ
@@ -126,7 +124,6 @@ WELCOME = f"""
 Выбери раздел:
 """
 
-# -- ИНФОПРОДУКТЫ --
 INFOPRODUCTS_INTRO = f"""
 {emoji('infoproducts')} <b>ИНФОПРОДУКТЫ</b>
 
@@ -142,11 +139,11 @@ OFFER1_DESC = f"""
 Готовое решение для увеличения откликов. Тебе перестанут отвечать и начнут спрашивать.
 
 {emoji('confirm')} <b>Ты получаешь:</b>
-• готовый оффер, который цепляет внимание
-• проверенную структуру сообщения
-• схему первого касания, вызывающую интерес
+- готовый оффер, который цепляет внимание
+- проверенную структуру сообщения
+- схему первого касания, вызывающую интерес
 
-{emoji('faq_info')} <b>Как использовать:</b> вставил свои данные{emoji('back')}скопировал{emoji('back')}отправил. Пять минут и ты уже в плюсе.
+{emoji('faq_info')} <b>Как использовать:</b> вставил свои данные - скопировал - отправил. Пять минут и ты уже в плюсе.
 
 {emoji('star')} <b>Кому нужно:</b> не отвечают на сообщения, не знаешь что писать, хочешь больше откликов без тестов.
 """
@@ -155,51 +152,49 @@ OFFER2_DESC = f"""
 {emoji('offer2')} <b>PSD ОБЛОЖКА ОФФЕРА</b>
 {emoji('money')} <b>290</b>
 
-Сообщение с картинкой открывают в три раза чаще. Этот PSD-шаблон — твой визуальный крючок.
+Сообщение с картинкой открывают в три раза чаще. Этот PSD-шаблон - твой визуальный крючок.
 
 {emoji('confirm')} <b>Ты получаешь:</b>
-• PSD-файл от дизайнера
-• готовую структуру под твой контент
+- PSD-файл от дизайнера
+- готовую структуру под твой контент
 
-{emoji('faq_info')} <b>Как использовать:</b> подставляешь свои работы{emoji('back')}крепишь к офферу{emoji('back')}рассылаешь.
+{emoji('faq_info')} <b>Как использовать:</b> подставляешь свои работы - крепишь к офферу - рассылаешь.
 
 {emoji('star')} <b>Кому нужно:</b> нет визуала под оффер, хочешь выделиться в ленте, поднять открываемость.
 """
 
 OFFER3_DESC = f"""
-{emoji('offer3')} <b>НАБОР «ОФФЕР + ИЗОБРАЖЕНИЕ»</b>
+{emoji('offer3')} <b>НАБОР "ОФФЕР + ИЗОБРАЖЕНИЕ"</b>
 {emoji('money')} <b>320</b>
 
 Полный комплект: текст, который продаёт + визуал, который притягивает взгляд.
 
 {emoji('confirm')} <b>Ты получаешь:</b>
-• готовый оффер со структурой
-• PSD-шаблон обложки
-• инструкцию по внедрению
+- готовый оффер со структурой
+- PSD-шаблон обложки
+- инструкцию по внедрению
 
 {emoji('star')} <b>Кому нужно:</b> хочешь всё и сразу, без сборки по частям. Лучший стартовый набор.
 """
 
-# -- УСЛУГИ --
 SERVICES_INTRO = f"""
 {emoji('services')} <b>УСЛУГИ</b>
 
 Выбери, что тебе нужно:
 """
 
-# Поиск клиентов под ключ
 SEARCH_INTRO = f"""
 {emoji('search')} <b>ПОИСК КЛИЕНТОВ ПОД КЛЮЧ</b>
 
 Ты дизайнер, а не спамер. Мы берём поиск клиентов на себя.
 
 {emoji('confirm')} <b>Что мы делаем:</b>
-• Находим целевых селлеров под твою нишу
-• Пишем им сами — грамотно, не шаблонно
-• Делаем серию касаний до ответа
-• Передаём тебе тёплых клиентов, готовых купить
+- Находим целевых селлеров под твою нишу
+- Пишем им сами - грамотно, не шаблонно
+- Делаем серию касаний до ответа
+- Передаём тебе тёплых клиентов, готовых купить
 
-Ты не пишешь «всем подряд». Ты не тратишь часы на пустые диалоги. Ты просто берёшь заказы.
+Ты не пишешь всем подряд. Ты не тратишь часы на пустые диалоги. Ты просто берёшь заказы.
 """
 
 SEARCH_5_DESC = f"""
@@ -211,11 +206,11 @@ SEARCH_5_DESC = f"""
 {emoji('star')} До 5 реальных клиентов
 
 <b>Для кого:</b>
-• Никогда не пробовал рассылки — протестируй систему
-• Был простой — вернись в поток без риска
-• Хочешь проверить наш подход перед крупным заказом
+- Никогда не пробовал рассылки - протестируй систему
+- Был простой - вернись в поток без риска
+- Хочешь проверить наш подход перед крупным заказом
 
-Первые отклики в день запуска. Твоя ниша жива — докажем.
+Первые отклики в день запуска. Твоя ниша жива - докажем.
 """
 
 SEARCH_35_DESC = f"""
@@ -224,12 +219,12 @@ SEARCH_35_DESC = f"""
 
 {emoji('message')} 5 000+ касаний
 {emoji('timer')} Срок: 7 дней
-{emoji('star')} От 35 откликов (часто 50–70)
+{emoji('star')} От 35 откликов (часто 50-70)
 
 <b>Что это даёт:</b>
-• Ты перестаёшь искать клиентов — они приходят сами
-• Формируешь лист ожидания из горячих селлеров
-• Выходишь из 20к/мес в стабильные 70к+
+- Ты перестаёшь искать клиентов - они приходят сами
+- Формируешь лист ожидания из горячих селлеров
+- Выходишь из 20к/мес в стабильные 70к+
 
 Лучшее соотношение цена/результат. Одинаково мощно для одиночек и студий.
 """
@@ -243,12 +238,12 @@ SEARCH_70_DESC = f"""
 {emoji('timer')} 2 недели
 {emoji('star')} 70+ откликов (до 120)
 
-<b>Ключевое отличие:</b> мы ищем селлеров с бюджетом. Твой средний чек ×2.
+<b>Ключевое отличие:</b> мы ищем селлеров с бюджетом. Твой средний чек x2.
 
 <b>Для тех, кто:</b>
-• Умеет продавать, но нужен поток горячих лидов
-• Хочет забыть о ценовых возражениях
-• Готов зарабатывать по рынку, а не демпинговать
+- Умеет продавать, но нужен поток горячих лидов
+- Хочет забыть о ценовых возражениях
+- Готов зарабатывать по рынку, а не демпинговать
 """
 
 SEARCH_120_DESC = f"""
@@ -260,9 +255,9 @@ SEARCH_120_DESC = f"""
 {emoji('timer')} 3-4 недели
 {emoji('star')} 120+ откликов (до 200+)
 
-<b>Полноценный отдел продаж на аутсорсе.</b> Мы делаем всё — ты только выполняешь заказы.
+<b>Полноценный отдел продаж на аутсорсе.</b> Мы делаем всё - ты только выполняешь заказы.
 
-<b>Для:</b> крупных студий и профи, готовых масштабироваться. Вопрос «где брать клиентов» исчезнет навсегда.
+<b>Для:</b> крупных студий и профи, готовых масштабироваться. Вопрос "где брать клиентов" исчезнет навсегда.
 """
 
 EXTRA_RETOUCH_DESC = f"""
@@ -271,7 +266,7 @@ EXTRA_RETOUCH_DESC = f"""
 
 Пишем тем, кто не ответил. Другой заход, другая логика. Конверсия вырастает в 1,5-2 раза.
 
-Рекомендуем 100% — окупается с первого же закрытого клиента.
+Рекомендуем 100% - окупается с первого же закрытого клиента.
 """
 
 EXTRA_SPEED_DESC = f"""
@@ -280,46 +275,44 @@ EXTRA_SPEED_DESC = f"""
 
 Сокращаем сроки на 45-60%. Подключаем +1-3 исполнителя.
 
-Когда результат нужен «вчера», а каждый день ожидания — упущенная прибыль.
+Когда результат нужен вчера, а каждый день ожидания - упущенная прибыль.
 """
 
-# Базы селлеров
 BASES_INTRO = f"""
 {emoji('bases')} <b>БАЗЫ СЕЛЛЕРОВ</b>
 
 Подбираем список потенциальных клиентов под твою нишу. Активные селлеры из открытых источников.
 
 {emoji('confirm')} <b>Ты получаешь:</b>
-• список активных продавцов
-• сегментированную аудиторию
-• готовую базу для немедленного запуска
+- список активных продавцов
+- сегментированную аудиторию
+- готовую базу для немедленного запуска
 
 {emoji('warning')} <b>ВАЖНО:</b>
-• Данные из открытых источников, могут терять актуальность
-• Не гарантируем ответ каждого — только объём и релевантность
-• Результат зависит от оффера и подачи
-• Возврата нет после выполнения
+- Данные из открытых источников, могут терять актуальность
+- Не гарантируем ответ каждого - только объём и релевантность
+- Результат зависит от оффера и подачи
+- Возврата нет после выполнения
 """
 
-BASES_1000_DESC = f"{emoji('package')} <b>База 1 000 селлеров</b> — {emoji('money')} <b>160</b>\nОтличный старт для теста ниши."
-BASES_5000_DESC = f"{emoji('bases')} <b>База 5 000 селлеров</b> — {emoji('money')} <b>490</b>\nЗолотая середина для стабильных заказов."
-BASES_10000_DESC = f"{emoji('package')} <b>База 10 000 селлеров</b> — {emoji('money')} <b>790</b>\nОбъём для системной работы."
-BASES_20000_DESC = f"{emoji('bases')} <b>База 20 000 селлеров</b> — {emoji('money')} <b>1 290</b>\nМаксимальный охват всей ниши."
+BASES_1000_DESC = f"{emoji('package')} <b>База 1 000 селлеров</b> - {emoji('money')} <b>160</b>\nОтличный старт для теста ниши."
+BASES_5000_DESC = f"{emoji('bases')} <b>База 5 000 селлеров</b> - {emoji('money')} <b>490</b>\nЗолотая середина для стабильных заказов."
+BASES_10000_DESC = f"{emoji('package')} <b>База 10 000 селлеров</b> - {emoji('money')} <b>790</b>\nОбъём для системной работы."
+BASES_20000_DESC = f"{emoji('bases')} <b>База 20 000 селлеров</b> - {emoji('money')} <b>1 290</b>\nМаксимальный охват всей ниши."
 
-# FAQ
 FAQ = f"""
 {emoji('faq')} <b>ЧАСТЫЕ ВОПРОСЫ</b>
 
-Выбери вопрос — я отвечу:
+Выбери вопрос - я отвечу:
 """
 
 FAQ_ANSWERS = {
     "faq_q1":  "Первые отклики чаще всего появляются уже в день запуска.",
-    "faq_q2":  "Базы полностью законны и безопасны — сбор из открытых источников.",
+    "faq_q2":  "Базы полностью законны и безопасны - сбор из открытых источников.",
     "faq_q3":  "Рассылки ведут профессионалы с опытом. Мы используем эффективные стратегии и повторные касания.",
     "faq_q4":  "Собираем из открытых источников. Никаких утечек и запрещённых методов.",
     "faq_q5":  "Работаем с нишами инфографики и графического дизайна.",
-    "faq_q6":  "Не устроил результат — гарантируем отклики и заявки согласно тарифу.",
+    "faq_q6":  "Не устроил результат - гарантируем отклики и заявки согласно тарифу.",
     "faq_q7":  "Скрытых доплат нет. Платишь только за выбранный товар или услугу.",
     "faq_q8":  "Офферы составлены профессионалами и многократно проверены в реальных рассылках.",
     "faq_q9":  "Используем обширные базы и сегментацию по нишам.",
@@ -339,7 +332,7 @@ SUCCESS_PAYMENT = f"""
 SUPPORT_MSG = f"""
 {emoji('support')} <b>ПОДДЕРЖКА</b>
 
-Напиши свой вопрос сюда — ответим в ближайшее время.
+Напиши свой вопрос сюда - ответим в ближайшее время.
 """
 
 # ============================================================
@@ -430,11 +423,9 @@ router = Router()
 @router.message(CommandStart())
 async def cmd_start(message: Message):
     await add_user(message.from_user.id, message.from_user.username, message.from_user.first_name)
-    if STICKER_WELCOME != "CAACAgIAAxkBAA...":
-        await message.answer_sticker(STICKER_WELCOME)
+    await message.answer_sticker(STICKER_WELCOME)
     await message.answer(WELCOME, parse_mode='HTML', reply_markup=main_menu())
 
-# -- Навигация --
 @router.message(F.text == "Услуги")
 async def services(message: Message):
     await message.answer(SERVICES_INTRO, parse_mode='HTML', reply_markup=services_menu())
@@ -461,7 +452,6 @@ async def back_services(call: CallbackQuery):
     await call.message.answer(SERVICES_INTRO, parse_mode='HTML', reply_markup=services_menu())
     await call.answer()
 
-# -- Услуги: Поиск клиентов --
 @router.callback_query(F.data == "service_search")
 async def search_intro(call: CallbackQuery):
     await call.message.answer(SEARCH_INTRO, parse_mode='HTML', reply_markup=search_packages())
@@ -520,22 +510,19 @@ async def view_speed(call: CallbackQuery):
 
 @router.callback_query(F.data == "order_speed")
 async def order_speed(call: CallbackQuery):
-    await call.message.answer(f"{emoji('confirm')} Напиши свои контакты — подключу ускорение.", parse_mode='HTML')
+    await call.message.answer(f"{emoji('confirm')} Напиши свои контакты - подключу ускорение.", parse_mode='HTML')
     for admin_id in ADMIN_IDS:
         await call.bot.send_message(admin_id, f"Заявка на ускорение от @{call.from_user.username}")
     await call.answer()
 
-# -- Услуги: Базы селлеров --
 @router.callback_query(F.data == "service_bases")
 async def bases_intro(call: CallbackQuery):
     await call.message.answer(BASES_INTRO, parse_mode='HTML', reply_markup=bases_menu())
     await call.answer()
 
-# -- Инфопродукты и Базы: оплата по реквизитам --
 @router.callback_query(F.data.startswith("checkout_"))
 async def checkout(call: CallbackQuery):
     data = call.data
-
     items = {
         "checkout_offer1":      ("Эффективный оффер", 180),
         "checkout_offer2":      ("PSD обложка оффера", 290),
@@ -545,9 +532,7 @@ async def checkout(call: CallbackQuery):
         "checkout_bases_10000": ("База 10000 селлеров", 790),
         "checkout_bases_20000": ("База 20000 селлеров", 1290),
     }
-
     item_name, price = items.get(data, ("Неизвестный товар", 0))
-
     text = f"""
 {PAYMENT_DETAILS}
 
@@ -558,12 +543,10 @@ async def checkout(call: CallbackQuery):
 
 После оплаты пришли скриншот <b>одним сообщением</b> прямо в этот чат.
 """
-
     builder = InlineKeyboardBuilder()
     builder.add(InlineKeyboardButton(text="Я оплатил, прислать скриншот", callback_data=f"paid_{data}"))
     builder.add(InlineKeyboardButton(text="Назад", callback_data="main_menu"))
     builder.adjust(1)
-
     await call.message.answer(text, parse_mode='HTML', reply_markup=builder.as_markup())
     await call.answer()
 
@@ -575,12 +558,10 @@ async def ask_screenshot(call: CallbackQuery):
     )
     await call.answer()
 
-# Принимаем скриншот и пересылаем админу
 @router.message(F.photo)
 async def payment_screenshot(message: Message):
     user = message.from_user
     await add_order(user.id, "manual_checkout", 0, status="pending_verification")
-
     for admin_id in ADMIN_IDS:
         await message.forward(admin_id)
         caption = (
@@ -589,10 +570,8 @@ async def payment_screenshot(message: Message):
             f"Проверь скриншот и подтверди выдачу вручную."
         )
         await message.bot.send_message(admin_id, caption)
-
     await message.answer(SUCCESS_PAYMENT, parse_mode='HTML', reply_markup=main_menu())
 
-# -- FAQ --
 @router.callback_query(F.data.startswith("faq_q"))
 async def faq_answer(call: CallbackQuery):
     answer = FAQ_ANSWERS.get(call.data, "Ответ не найден.")
@@ -604,7 +583,6 @@ async def back_faq(call: CallbackQuery):
     await call.message.answer(FAQ, parse_mode='HTML', reply_markup=faq_menu())
     await call.answer()
 
-# -- Поддержка (пересылка админу) --
 @router.message(F.text, lambda msg: msg.text not in ["Услуги", "Инфопродукты", "FAQ", "Поддержка"])
 async def forward_to_admin(message: Message):
     for admin_id in ADMIN_IDS:
