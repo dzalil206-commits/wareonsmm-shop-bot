@@ -375,9 +375,17 @@ def back_button(callback: str):
 # ============================================================
 router = Router()
 
+from aiogram.types import MessageEntity
+
 @router.message(F.text == "тест")
 async def test_emoji(message: Message):
-    await message.answer('<tg-emoji emoji-id="5906975484054345026">.</tg-emoji> проверка премиум эмодзи', parse_mode='HTML')
+    entity = MessageEntity(
+        type="custom_emoji",
+        offset=0,
+        length=1,
+        custom_emoji_id="5906975484054345026"
+    )
+    await message.answer(". проверка премиум эмодзи", entities=[entity])
     
 @router.message(CommandStart())
 async def cmd_start(message: Message):
