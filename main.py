@@ -22,10 +22,10 @@ STICKER_THANKS = "CAACAgIAAxkBAAFJQYxqAAGSpzX4vKAlryhAQeag0JN0zwIAAsVQAAIEyjFJrF
 
 # Реквизиты для оплаты
 PAYMENT_DETAILS = f"5599002124687536"
-<b>РЕКВИЗИТЫ ДЛЯ ОПЛАТЫ</b>
+{emoji('payment_btn')} <b>РЕКВИЗИТЫ ДЛЯ ОПЛАТЫ</b>
 
 <pre>Банк: Юмани
-Карта: 5599002124687536
+Карта: 5536 91XX XXXX XXXX
 
 После оплаты пришли скриншот прямо сюда
 """
