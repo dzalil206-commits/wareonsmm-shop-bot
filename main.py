@@ -382,7 +382,7 @@ async def test_emoji(message: Message):
 @router.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer_sticker(STICKER_WELCOME)
-    await message.answer(WELCOME(), parse_mode='HTML', reply_markup=main_menu_kb())
+    await message.answer("Привет. Я бот-магазин.", reply_markup=main_menu_kb())
 
 @router.message(F.text == "Услуги")
 async def services(message: Message):
