@@ -1,6 +1,5 @@
 import asyncio
 import logging
-# import aiosqlite  # не используется
 from aiogram import Bot, Dispatcher, F, Router, types
 from aiogram.filters import CommandStart
 from aiogram.types import (
