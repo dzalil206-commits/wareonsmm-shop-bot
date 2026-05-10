@@ -1,6 +1,6 @@
 import asyncio
 import logging
-import aiosqlite
+# import aiosqlite  # не используется
 from aiogram import Bot, Dispatcher, F, Router, types
 from aiogram.filters import CommandStart
 from aiogram.types import (
@@ -70,40 +70,13 @@ def e(name: str) -> str:
 # БАЗА ДАННЫХ
 # ============================================================
 async def init_db():
-    async with aiosqlite.connect("shop.db") as db:
-        await db.execute(
-            "CREATE TABLE IF NOT EXISTS users ("
-            "user_id INTEGER PRIMARY KEY, "
-            "username TEXT, "
-            "first_name TEXT, "
-            "joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)"
-        )
-        await db.execute(
-            "CREATE TABLE IF NOT EXISTS orders ("
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "user_id INTEGER, "
-            "item_name TEXT, "
-            "amount INTEGER, "
-            "status TEXT DEFAULT 'pending', "
-            "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)"
-        )
-        await db.commit()
+    pass
 
 async def add_user(user_id: int, username: str, first_name: str):
-    async with aiosqlite.connect("shop.db") as db:
-        await db.execute(
-            "INSERT OR IGNORE INTO users (user_id, username, first_name) VALUES (?, ?, ?)",
-            (user_id, username, first_name)
-        )
-        await db.commit()
+    pass
 
 async def add_order(user_id: int, item_name: str, amount: int, status: str = "pending_verification"):
-    async with aiosqlite.connect("shop.db") as db:
-        await db.execute(
-            "INSERT INTO orders (user_id, item_name, amount, status) VALUES (?, ?, ?, ?)",
-            (user_id, item_name, amount, status)
-        )
-        await db.commit()
+    pass
 
 # ============================================================
 # ТЕКСТЫ (без f-строк с тройными кавычками)
@@ -405,7 +378,6 @@ router = Router()
 
 @router.message(CommandStart())
 async def cmd_start(message: Message):
-    await add_user(message.from_user.id, message.from_user.username, message.from_user.first_name)
     await message.answer_sticker(STICKER_WELCOME)
     await message.answer(WELCOME(), parse_mode='HTML', reply_markup=main_menu_kb())
 
